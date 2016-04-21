@@ -27,14 +27,12 @@ function playerMove(move) {
   return move || getInput();
 };
 
-
-
 var computerMove = function (move) {
   return move || randomPlay();
 }
 
 function getWinner(playerMove,computerMove)
-// somehow could not put function playerMove() computerMove() into this parameter
+
 {
 
   if ( playerMove == "rock" && computerMove == "paper") {
@@ -72,14 +70,8 @@ function getWinner(playerMove,computerMove)
 function playToFive() {
 
 
-    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
-
-
     while ( (playerWins < 5 ) && (computerWins < 5) ) {
 
-      // I moved these variablies inside this loop because they were part of your problem. Every time pMov gets called, it runs a function and redefines itself based on the input.
-      // That's fine in this loop, because you WANT it to run the whole thing again every time the loop runs, but not anywhere else.
 
       var pMov = playerMove();
       var cMov = computerMove();
